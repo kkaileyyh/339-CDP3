@@ -500,3 +500,10 @@ a:hover {
         color: white;
     }
 }
+
+@media (prefers-reduced-motion: reduce){
+   *{
+    animation: none;
+    transition: none;
+   } 
+}
