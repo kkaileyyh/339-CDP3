@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/reset.css">
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b3bfab5044.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js" defer></script>
+    <title>Home page</title>
+</head>
+<body> 
+    <a href = "#main">Skip to Main Content</a>
+
+    <header>
+        <h1>Skyline Cross Country</h1>
+        <button id="nav-toggle" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>  
+
+        <nav id="sliding-nav">
+            <ul>
+               <li><a href="index.html">Home Page</a></li>
+               <li><a href="#meets">Meets</a></li>
+               <li><a href="mens.html">Men's Team</a></li>
+               <li><a href="womens.html">Women's Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 id = "main">Welcome to Skyline Cross Country!</h2>
+            <p id = "intro-content">
+                Track out athletes' progress, view race time, and compare historical performances. 
+                Our website is designed to help coaches monitor and analyze athlete development over multiple years.
+            </p>
+        </section>
+
+        <section>
+            <div class = "total-athletes-box">
+                <h2>2024 Total Athletes</h2>
+                <p id = "totalAthletes">Loading...</p>
+                <p id = "each-count">
+                    <span id="menCount">Loading...</span> men, 
+                    <span id="womenCount">Loading...</span> women
+                </p>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <h2>Find an Athlete</h2>
+            <form class="search-form" action="#" method="get">
+              <div class="search-input-wrapper">
+                <label for="athlete-search" class="sr-only">Search for an athlete</label>
+                <input
+                  type="text"
+                  id="athlete-search"
+                  name="athlete-search"
+                  placeholder="Enter athlete's name"
+                  class="search-input"
+                />
+                <button type="submit" class="search-button" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+          </section>
+        
+          <button id = "modeToggle">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+                                                                                                                                                                                                                                                                                                                          
+
+    </main>
+
+    <footer>
+        <div>
+            <p>created by Kailey H for UM SI 339 <br>
+                &copy; 2024 Skyline Cross Country.</p>
+            <a href = "https://www.athletic.net/team/29445/cross-country/2024">Ann Arbor Skyline Highschool - XC 2024</a>
+        </div>
+    </footer>
+</body>
+</html>
