@@ -30,57 +30,31 @@ window.onload = function() {
     }
 };
 
-// Function to toggle between dark and light mode
-function toggleMode() {
+// Dark mode
+document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
-    const button = document.getElementById('modeToggle');
-    const currentMode = body.classList.contains('dark-mode') ? 'dark' : 'light';
-  
-    // Toggle color scheme (light/dark)
-    if (currentMode === 'light') {
-      body.classList.remove('light-mode');
-      body.classList.add('dark-mode');
-      button.innerHTML = '<i class="fa-solid fa-sun"></i>';  // Change moon to sun
-      localStorage.setItem('theme', 'dark');
-    } else {
-      body.classList.remove('dark-mode');
-      body.classList.add('light-mode');
-      button.innerHTML = '<i class="fa-solid fa-moon"></i>';  // Change sun to moon
-      localStorage.setItem('theme', 'light');
-    }
-}
-  
-// Add event listener to the button to toggle the mode
-document.getElementById('modeToggle').addEventListener('click', toggleMode);
+    const modeToggle = document.getElementById('modeToggle');
 
-// Function to apply the saved theme when the page loads
-function applySavedTheme() {
+    // Function to set the theme
+    function setTheme(isDark) {
+        if (isDark) {
+            body.classList.add('dark-mode');
+            modeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.remove('dark-mode');
+            modeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Check for saved theme preference or default to light mode
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.body.classList.remove('light-mode', 'dark-mode');
-        document.body.classList.add(savedTheme);
-        const button = document.getElementById('modeToggle');
-        button.innerHTML = savedTheme === 'dark' 
-            ? '<i class="fa-solid fa-sun"></i>' 
-            : '<i class="fa-solid fa-moon"></i>';
-    } else {
-        // Default to light mode if no theme is saved
-        document.body.classList.add('light-mode');
-    }
-}
+    setTheme(savedTheme === 'dark');
 
-// Call the function to apply the saved theme when the page loads
-document.addEventListener('DOMContentLoaded', applySavedTheme);
-
-// const themeToggle = document.getElementById("modeToggle");
-// const body = document.body;
-
-// themeToggle.addEventListener("click", function() {
-//     body.classList.toggle("dark-mode");
-
-//     if (body.classList.contains("dark-mode")){
-//         localStorage.setItem("theme", "dark");
-//     }else{
-//         localStorage.setItem("theme", "light");
-//     }
-// });
+    // Toggle theme when button is clicked
+    modeToggle.addEventListener('click', () => {
+        const isDark = body.classList.contains('dark-mode');
+        setTheme(!isDark);
+    });
+});
