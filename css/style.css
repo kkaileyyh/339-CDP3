@@ -335,9 +335,6 @@ color: #2C5F2D;
 margin-bottom: 20px;
 }
 
-#personal-info{
-    background-color: transparent;
-}
 
 table {
 border-collapse: collapse; 
@@ -552,6 +549,10 @@ tr:nth-child(even) {
     height: 200px;
     margin-left: 10%;
 }
+
+body.dark-mode #personal-info {
+    background-color: #333333;
+}
 }
 
 /* /////////////////////// Dark Mode for toggle button //////////////////////////////// */
@@ -652,8 +653,13 @@ body.dark-mode #personal-info .personal-info-desc{
 color: white;
 }
 
-body.dark-mode #personal-info{
+/* body.dark-mode #personal-info{
 background-color: #333333;
+}
+ */
+
+body.dark-mode #personal-info {
+    background-color: transparent;
 }
 
 /* Prefered reduction motion */
