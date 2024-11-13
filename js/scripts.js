@@ -1,3 +1,4 @@
+//athlete counts on landing page
 function updateAthleteCounts() {
     const menCountElem = document.getElementById('menCount');
     const womenCountElem = document.getElementById('womenCount');
@@ -14,6 +15,7 @@ function updateAthleteCounts() {
     }
 }
 
+//navigation bar
 function toggleNavigation() {
     const nav = document.getElementById("sliding-nav");
     if (nav) {
