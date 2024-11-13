@@ -335,6 +335,10 @@ color: #2C5F2D;
 margin-bottom: 20px;
 }
 
+#personal-info{
+    background-color: transparent;
+}
+
 table {
 border-collapse: collapse; 
 margin-bottom: 20px;
@@ -649,7 +653,7 @@ color: white;
 }
 
 body.dark-mode #personal-info{
-/* background-color: #333333; */
+background-color: #333333;
 }
 
 /* Prefered reduction motion */
